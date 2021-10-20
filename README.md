@@ -6,11 +6,11 @@ The database used in the study is the animal-crossing database found in Kaggle (
 After installing postgre on your computer, run the following commands to create a new data base and a new *recipes* table:  
 ```bash
 createdb animal-crossing
-./create /path/to/tables
+./import_db_scripts/create /path/to/import_db_scripts/tables
 ```
 or
 ```bash
-./create $(readlink -f tables)
+./import_db_scripts/create $(readlink -f import_db_scripts/tables)
 ```
 
 ## Import Database into Redis:
