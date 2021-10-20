@@ -1,0 +1,36 @@
+#! /usr/bin/bash
+
+psql \
+  -d animal-crossing \
+  -f create-animal-crossing-tables.sql \
+  -v path_to_accessories="'$1/accessories.csv'" \
+  -v path_to_accessories="'$1/accessories.csv'" \
+  -v path_to_achievements="'$1/achievements.csv'" \
+  -v path_to_art="'$1/art.csv'" \
+  -v path_to_bags="'$1/bags.csv'" \
+  -v path_to_bottoms="'$1/bottoms.csv'" \
+  -v path_to_construction="'$1/construction.csv'" \
+  -v path_to_dress_up="'$1/dress-up.csv'" \
+  -v path_to_fencing="'$1/fencing.csv'" \
+  -v path_to_fish="'$1/fish.csv'" \
+  -v path_to_floors="'$1/floors.csv'" \
+  -v path_to_fossils="'$1/fossils.csv'" \
+  -v path_to_headwear="'$1/headwear.csv'" \
+  -v path_to_housewares="'$1/housewares.csv'" \
+  -v path_to_insects="'$1/insects.csv'" \
+  -v path_to_miscellaneous="'$1/miscellaneous.csv'" \
+  -v path_to_music="'$1/music.csv'" \
+  -v path_to_other="'$1/other.csv'" \
+  -v path_to_photos="'$1/photos.csv'" \
+  -v path_to_posters="'$1/posters.csv'" \
+  -v path_to_reactions="'$1/reactions.csv'" \
+  -v path_to_recipes="'$1/recipes.csv'" \
+  -v path_to_rugs="'$1/rugs.csv'" \
+  -v path_to_shoes="'$1/shoes.csv'" \
+  -v path_to_socks="'$1/socks.csv'" \
+  -v path_to_tools="'$1/tools.csv'" \
+  -v path_to_tops="'$1/tops.csv'" \
+  -v path_to_umbrellas="'$1/umbrellas.csv'" \
+  -v path_to_villagers="'$1/villagers.csv'" \
+  -v path_to_wall_mounted="'$1/wall-mounted.csv'" \
+  -v path_to_wallpaper="'$1/wallpaper.csv'" \
