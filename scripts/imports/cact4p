@@ -2,7 +2,7 @@
 
 psql \
   -d animal-crossing \
-  -f import_db_scripts/create-animal-crossing-tables.sql \
+  -f scripts/imports/cact4p.sql \
   -v path_to_accessories="'$1/accessories.csv'" \
   -v path_to_accessories="'$1/accessories.csv'" \
   -v path_to_achievements="'$1/achievements.csv'" \
