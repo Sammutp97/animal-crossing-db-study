@@ -6,9 +6,9 @@ The database used in the study is the [animal-crossing database](https://www.kag
 ## Table Of Content.
 - [1  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#1-prerequisites-toc)                  Prerequisites.
 - [2  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#2-import-the-database-toc)            Import the database...
-- [2.1](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#21-into-postgresql-toc)               ... into PostGreSQL.
-- [2.2](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#22-into-redis-toc)                    ... into Redis.
-- [3  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#3-organisation-of-the-repository-toc) Organization of the repository
+- [2.1](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#21--into-postgresql-toc)               ... into PostGreSQL.
+- [2.2](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#22--into-redis-toc)                    ... into Redis.
+- [3  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#3-organization-of-the-repository-toc) Organization of the repository
 
 ## 1. Prerequisites. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 Install PostGreSQL: [tutorial](https://supaerodatascience.github.io/OBD/0_2_postgres.html#postgresql-installation)  
@@ -38,26 +38,23 @@ Or enter into the file, and modify the AUTO variable to True to also import the 
 
 ## 3. Organization of the repository [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 
-
-The repository is organized as follows:
-
-📦 animal-crossing-db-study
-┣ 📂 [`tables`]
-┃ ┣ 📜 [`accessories.csv`]
-┃ ┣ 📜 [`achievements.csv`]
-┃ ┣ ...
-┃ ┗ 📜 [`wallpaper.csv`]
-┣ 📂 [`scripts`]
-┃ ┣ 📂 [`imports`]
-┃ ┃ ┣ 📜 [`redis_import_main.py`]
-┃ ┃ ┣ 📜 [`import_db.redis`]
-┃ ┃ ┣ 📜 [`cact4p.sql`]
-┃ ┃ ┗ 📜 [`cact4p`]
-┃ ┣ 📜 ...
-┃ ┗ 📜 [`analysis.py`]
-┣ 📜 LICENCE
-┗ 📜 README.md
-
+The repository is organized as follows:  
+📦 animal-crossing-db-study  
+┣ 📂 [`tables`]  
+┃ ┣ 📜 [`accessories.csv`]  
+┃ ┣ 📜 [`achievements.csv`]  
+┃ ┣ ...  
+┃ ┗ 📜 [`wallpaper.csv`]  
+┣ 📂 [`scripts`]  
+┃ ┣ 📂 [`imports`]  
+┃ ┃ ┣ 📜 [`redis_import_main.py`]  
+┃ ┃ ┣ 📜 [`import_db.redis`]  
+┃ ┃ ┣ 📜 [`cact4p.sql`]  
+┃ ┃ ┗ 📜 [`cact4p`]  
+┃ ┣ 📜 ...  
+┃ ┗ 📜 [`analysis.py`]  
+┣ 📜 LICENCE  
+┗ 📜 README.md  
 
 [`tables`]: tables
 [`accessories.csv`]: tables/accessories.csv
