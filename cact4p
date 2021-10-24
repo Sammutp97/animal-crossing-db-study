@@ -1,0 +1,41 @@
+#! /usr/bin/bash
+
+if [[ $# -eq 0 ]]; then echo "too few arguments"; exit 0; fi
+if [[ $# -gt 1 ]]; then echo "too many arguments"; exit 0; fi
+
+path_to=$(readlink -f $1)
+
+psql \
+  -d animal-crossing \
+  -f scripts/imports/cact4p.sql \
+  -v path_to_accessories="'$path_to/accessories.csv'" \
+  -v path_to_accessories="'$path_to/accessories.csv'" \
+  -v path_to_achievements="'$path_to/achievements.csv'" \
+  -v path_to_art="'$path_to/art.csv'" \
+  -v path_to_bags="'$path_to/bags.csv'" \
+  -v path_to_bottoms="'$path_to/bottoms.csv'" \
+  -v path_to_construction="'$path_to/construction.csv'" \
+  -v path_to_dress_up="'$path_to/dress-up.csv'" \
+  -v path_to_fencing="'$path_to/fencing.csv'" \
+  -v path_to_fish="'$path_to/fish.csv'" \
+  -v path_to_floors="'$path_to/floors.csv'" \
+  -v path_to_fossils="'$path_to/fossils.csv'" \
+  -v path_to_headwear="'$path_to/headwear.csv'" \
+  -v path_to_housewares="'$path_to/housewares.csv'" \
+  -v path_to_insects="'$path_to/insects.csv'" \
+  -v path_to_miscellaneous="'$path_to/miscellaneous.csv'" \
+  -v path_to_music="'$path_to/music.csv'" \
+  -v path_to_other="'$path_to/other.csv'" \
+  -v path_to_photos="'$path_to/photos.csv'" \
+  -v path_to_posters="'$path_to/posters.csv'" \
+  -v path_to_reactions="'$path_to/reactions.csv'" \
+  -v path_to_recipes="'$path_to/recipes.csv'" \
+  -v path_to_rugs="'$path_to/rugs.csv'" \
+  -v path_to_shoes="'$path_to/shoes.csv'" \
+  -v path_to_socks="'$path_to/socks.csv'" \
+  -v path_to_tools="'$path_to/tools.csv'" \
+  -v path_to_tops="'$path_to/tops.csv'" \
+  -v path_to_umbrellas="'$path_to/umbrellas.csv'" \
+  -v path_to_villagers="'$path_to/villagers.csv'" \
+  -v path_to_wall_mounted="'$path_to/wall-mounted.csv'" \
+  -v path_to_wallpaper="'$path_to/wallpaper.csv'" \

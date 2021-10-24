@@ -22,13 +22,12 @@ The repository is organized as follows:
 ┣ 📂 [`scripts`]  
 ┃ ┣ 📂 [`imports`]  
 ┃ ┃ ┣ 📜 [`redis_import_main.py`]  
-┃ ┃ ┣ 📜 [`import_db.redis`]  
 ┃ ┃ ┣ 📜 [`cact4p.sql`]  
-┃ ┃ ┗ 📜 [`cact4p`]  
 ┃ ┣ 📜 ...  
 ┃ ┗ 📜 [`analysis.py`]  
 ┣ 📜 LICENCE  
-┗ 📜 README.md  
+┣ 📜 README.md  
+┗ 📜 [`cact4p`]  
 
 ## 1. Prerequisites. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 Install PostGreSQL: [tutorial](https://supaerodatascience.github.io/OBD/0_2_postgres.html#postgresql-installation)  
@@ -46,11 +45,7 @@ createdb animal-crossing
 ```
 and then
 ```bash
-./scripts/imports/cact4p /path/to/tables
-```
-or
-```bash
-./scripts/imports/cact4p $(readlink -f tables)
+./cact4p tables
 ```
 
 ### 2.2. ... into Redis. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
