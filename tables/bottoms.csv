@@ -348,8 +348,8 @@ gingham picnic skirt,Purple,No,880,220,Purple,Purple,1x1,Able Sisters,Available 
 gingham picnic skirt,Light blue,No,880,220,Light blue,Light blue,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Simple,everyday,No,For sale,BottomsTexSkirtAlineGingham7,12198,TybzRCu8gofwRzgXP
 gobelin shorts,Beige,No,840,210,Beige,Pink,1x1,Able Sisters,Available from Able Sisters shop only,All Year,No,1.0.0,Elegant,everyday; vacation,No,For sale,BottomsTexPantsHalfGobelins0,5734,ZpbzaPwWnQwfA3DME
 gobelin shorts,Black,No,840,210,Black,Pink,1x1,Able Sisters,Available from Able Sisters shop only,All Year,No,1.0.0,Elegant,everyday; vacation,No,For sale,BottomsTexPantsHalfGobelins1,8923,it5MgrQ7YEK2K7apb
-grass skirt,Brown,Yes,NFS,140,Beige,Beige,1x1,Crafting,,All Year,No,1.0.0,Active,outdoorsy; vacation,No,Not for sale,BottomsTexSkirtBoxGrass0,4333,F3GSr8B7zuThrFq5p
-green grass skirt,Green,Yes,NFS,140,Green,Green,1x1,Crafting,,All Year,No,1.0.0,Active,outdoorsy; vacation,No,Not for sale,BottomsTexSkirtBoxGrass1,8907,yNBwCvymEC4CDMdKq
+grass skirt,Brown,Yes,-1,140,Beige,Beige,1x1,Crafting,,All Year,No,1.0.0,Active,outdoorsy; vacation,No,Not for sale,BottomsTexSkirtBoxGrass0,4333,F3GSr8B7zuThrFq5p
+green grass skirt,Green,Yes,-1,140,Green,Green,1x1,Crafting,,All Year,No,1.0.0,Active,outdoorsy; vacation,No,Not for sale,BottomsTexSkirtBoxGrass1,8907,yNBwCvymEC4CDMdKq
 hickory-stripe pants,Blue,No,1560,390,Blue,Blue,1x1,Able Sisters,Available from Able Sisters shop only,All Year,No,1.0.0,Simple,everyday; outdoorsy; sporty,No,For sale,BottomsTexPantsWideHickory0,4254,ad3vra7ZNB3DaC6mo
 hickory-stripe pants,Light blue,No,1560,390,Light blue,Light blue,1x1,Able Sisters,Available from Able Sisters shop only,All Year,No,1.0.0,Simple,everyday; outdoorsy; sporty,No,For sale,BottomsTexPantsWideHickory1,9537,tHRqJdZkTHZxiPHjg
 jogging shorts,Pink,No,700,175,Pink,White,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,Yes,1.0.0,Active,outdoorsy; comfy; sporty,No,For sale,BottomsTexPantsHotRunning0,4195,CTx32u5FGCu5aZZuP
@@ -659,9 +659,9 @@ tiered skirt,Mint,No,1200,300,Light blue,Light blue,1x1,Able Sisters,Available f
 tiered skirt,Avocado,No,1200,300,Green,Green,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Simple,everyday; fairy tale; comfy; vacation,No,For sale,BottomsTexSkirtLongTiered2,8718,sWk6G7Ceqv8Lqeg58
 tiered skirt,Yellow,No,1200,300,Yellow,Yellow,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Simple,everyday; fairy tale; comfy; vacation,No,For sale,BottomsTexSkirtLongTiered3,8719,5KhcEe8DJ4CSjNiW5
 tiered skirt,Blue,No,1200,300,Blue,Blue,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,Yes,1.0.0,Simple,everyday; fairy tale; comfy; vacation,No,For sale,BottomsTexSkirtLongTiered4,8720,QrMtzDRxGF75foy3F
-torn pants,Brown,No,NFS,10,Brown,Brown,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared0,5701,kepGvoJ3xHFXLwJvp
-torn pants,Black,No,NFS,10,Black,Black,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared1,9281,PZRnJXs8sxPCC4vE6
-torn pants,Gray,No,NFS,10,Gray,Gray,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared2,9282,vwftSXCSwsCsBmbhx
+torn pants,Brown,No,-1,10,Brown,Brown,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared0,5701,kepGvoJ3xHFXLwJvp
+torn pants,Black,No,-1,10,Black,Black,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared1,9281,PZRnJXs8sxPCC4vE6
+torn pants,Gray,No,-1,10,Gray,Gray,1x1,Recycle bin,,All Year,No,1.0.0,Simple,goth,No,Not for sale,BottomsTexPantsWideTeared2,9282,vwftSXCSwsCsBmbhx
 track pants,Navy blue,No,770,192,Blue,Light blue,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Active,outdoorsy; sporty,No,For sale,BottomsTexPantsNormalSportsjersey0,3335,E5cqgBweC9ZF5FMSD
 track pants,Gray,No,770,192,Gray,Pink,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Active,outdoorsy; sporty,No,For sale,BottomsTexPantsNormalSportsjersey1,11284,eeoJ3osaNohwGSTGY
 track pants,White,No,770,192,White,Pink,1x1,Able Sisters,Available from either Mable's temporary shop or Able Sisters shop,All Year,No,1.0.0,Active,outdoorsy; sporty,No,For sale,BottomsTexPantsNormalSportsjersey2,11285,cBhfnx7gfTtAvhKfn

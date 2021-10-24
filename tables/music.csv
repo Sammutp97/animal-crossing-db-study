@@ -1,13 +1,13 @@
 ﻿Name,Buy,Sell,Color 1,Color 2,Size,Source,Source Notes,Version,Catalog,Filename,Internal ID,Unique Entry ID
 Agent K.K.,3200,800,Brown,Orange,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""It's hard to say."" as your mood",1.0.0,For sale,mjk_Keiji,2472,omxkkikQ5jwtoGiXa
 Aloha K.K.,3200,800,Brown,Light blue,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""Laid-back."" as your mood",1.0.0,For sale,mjk_Aloha,2423,rxKK6nfmC4rWvXxCv
-Animal City,NFS,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_DoubutuNoMachi,4312,PTLK2jL5rb7t5Rm5j
+Animal City,-1,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_DoubutuNoMachi,4312,PTLK2jL5rb7t5Rm5j
 Bubblegum K.K.,3200,800,Brown,Light blue,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""I feel good!"" as your mood",1.0.0,For sale,mjk_Idol,2492,ZgwCoTem6x9efZAnD
 Café K.K.,3200,800,Brown,Colorful,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""I feel good!"" as your mood",1.0.0,For sale,mjk_Paris,2454,ZXwXi8YnFpks2RPuK
 Comrade K.K.,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little blue..."" as your mood",1.0.0,For sale,mjk_ShowaKayo,2448,5ufeoTSFwRxQTrXdq
 DJ K.K.,3200,800,Brown,Pink,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little grumpy..."" as your mood",1.0.0,For sale,mjk_EuroBeat,2443,6H8pzhuYdfNpD8KTd
-Drivin',NFS,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_Drive,4314,at7FbmJfbKvsGHB5T
-Farewell,NFS,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_Sayonara,4313,diprrz97SbCJGzXM3
+Drivin',-1,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_Drive,4314,at7FbmJfbKvsGHB5T
+Farewell,-1,800,Brown,None,1x1,K.K. concert,Hidden song - only by request,1.0.0,Not for sale,mjk_Sayonara,4313,diprrz97SbCJGzXM3
 Forest Life,3200,800,Brown,Yellow,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""Laid-back."" as your mood",1.0.0,For sale,mjk_MoriNoSeikatsu,2461,ZM4S88gPPapGknNeR
 Go K.K. Rider,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little grumpy..."" as your mood",1.0.0,For sale,mjk_KekeRider,2450,w6jLsBX6ZX4oPDwDh
 Hypno K.K.,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""It's hard to say."" as your mood",1.0.0,For sale,mjk_UtataneNoYume,2480,qwHrcscJZNxD5mn8k
@@ -17,7 +17,7 @@ K.K. Adventure,3200,800,Brown,Orange,1x1,"K.K. concert, Nook Shopping Catalog","
 K.K. Aria,3200,800,Brown,Blue,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""Laid-back."" as your mood",1.0.0,For sale,mjk_Maria,2413,9ZSqWa7JjfMhwPWEE
 K.K. Ballad,3200,800,Brown,Black,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little blue..."" as your mood",1.0.0,For sale,mjk_Ballad,2447,awbEqrBQ52aCi4YKj
 K.K. Bazaar,3200,800,Brown,Black,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little grumpy..."" as your mood",1.0.0,For sale,mjk_Roma,2486,yJdhdZPjGQSs4xL7a
-K.K. Birthday,NFS,800,Brown,Light blue,1x1,K.K. concert,Received on your first time seeing KK perform during your birthday,1.0.0,Not for sale,mjk_BirthdaySong,2495,xrFkTdiZ9fHkYMvDr
+K.K. Birthday,-1,800,Brown,Light blue,1x1,K.K. concert,Received on your first time seeing KK perform during your birthday,1.0.0,Not for sale,mjk_BirthdaySong,2495,xrFkTdiZ9fHkYMvDr
 K.K. Blues,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""It's hard to say."" as your mood",1.0.0,For sale,mjk_Blues,2436,HtTcKk7AdJLrmwXXK
 K.K. Bossa,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""Laid-back."" as your mood",1.0.0,For sale,mjk_Bossa,2415,Bu3tGw6JnhnMEabz2
 K.K. Calypso,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""I feel good!"" as your mood",1.0.0,For sale,mjk_Caripso,2416,g7TbqwnzRw64kcmso
@@ -93,7 +93,7 @@ The K. Funk,3200,800,Brown,Orange,1x1,"K.K. concert, Nook Shopping Catalog","Pos
 To the Edge,3200,800,Brown,White,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""It's hard to say."" as your mood",1.0.0,For sale,mjk_NamiNami,2462,P5ABGwMHvnYiFHcQN
 Two Days Ago,3200,800,Brown,Black,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""A little blue..."" as your mood",1.0.0,For sale,mjk_Ototoi,2459,AzAHbHLA9oY2ihxrq
 Wandering,3200,800,Brown,Gray,1x1,"K.K. concert, Nook Shopping Catalog","Possible song KK will play when choosing ""Laid-back."" as your mood",1.0.0,For sale,mjk_Horo,2477,eDgjD4iS8sHZ64k3k
-Welcome Horizons,NFS,800,Brown,None,1x1,K.K. concert,Received on your first time seeing KK perform,1.0.0,Not for sale,mjk_MainTheme,4318,eBR8TwgdbAKWEQc3T
+Welcome Horizons,-1,800,Brown,None,1x1,K.K. concert,Received on your first time seeing KK perform,1.0.0,Not for sale,mjk_MainTheme,4318,eBR8TwgdbAKWEQc3T
 Hazure01,3200,800,None,None,1x1,K.K. concert,Played by K.K. if you request something he doesn't have (does not give take-home track),1.0.0,Not in catalog,mjk_Miss1,4315,yzpTLMjxFrMMyPe9t
 Hazure02,3200,800,None,None,1x1,K.K. concert,Played by K.K. if you request something he doesn't have (does not give take-home track),1.0.0,Not in catalog,mjk_Miss2,4316,oeZ6a9qJA54fyuwA3
 Hazure03,3200,800,None,None,1x2,K.K. concert,Played by K.K. if you request something he doesn't have (does not give take-home track),1.0.0,Not in catalog,mjk_Miss3,4317,cXrvAEgQstHcnP5Zf
