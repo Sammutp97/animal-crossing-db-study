@@ -33,13 +33,13 @@ def main(db_path, script=True, auto=False, verbose=False):
                     first_row = False
                 else: #Add to Redis                 #TODO: add an xtra field for csv file of origin
                     if auto: #Import directly 
-                        line = {f'{"_".join(header.split(" "))}' : f'{value}' for header, value in list(zip(headers, row))}
+                        line = {f"{'_'.join(header.split(' '))}" : value.replace('\n', ';') for header, value in list(zip(headers, row))}
                         r.hmset(f'{elem_id}', line)
                         if verbose:
                             print(r.hgetall(f'{elem_id}'))
 
                     if script: #Create redis script: ex: HMSET elem_id field1 "Hello" field2 "World"
-                        line = " ".join(f'{"_".join(header.split(" "))} "{value}"' for header, value in list(zip(headers, row)) )
+                        line = " ".join(f"{'_'.join(header.split(' '))} " + value.replace('\n', ';') for header, value in list(zip(headers, row)) )
                         redis_line = f'HMSET {elem_id} {line}\n'
                         redis_script.write(redis_line)
                         if verbose:
