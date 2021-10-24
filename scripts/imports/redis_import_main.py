@@ -29,17 +29,18 @@ def main(db_path, script=True, auto=False, verbose=False):
             for row in csvreader:
                 if first_row == True:
                     headers = row
+                    headers[0] = headers[0][1:]
                     first_row = False
                 else: #Add to Redis                 #TODO: add an xtra field for csv file of origin
                     if auto: #Import directly 
-                        dict = {f'{"_".join(header.split(" "))}' : f'{value}' for header, value in list(zip(headers, row))}
-                        r.hmset(f'{elem_id}', dict)
+                        line = {f'{"_".join(header.split(" "))}' : f'{value}' for header, value in list(zip(headers, row))}
+                        r.hmset(f'{elem_id}', line)
                         if verbose:
                             print(r.hgetall(f'{elem_id}'))
 
                     if script: #Create redis script: ex: HMSET elem_id field1 "Hello" field2 "World"
-                        dict = " ".join(f'{"_".join(header.split(" "))} "{value}"' for header, value in list(zip(headers, row)) )
-                        redis_line = f'HMSET {elem_id} {dict}\n'
+                        line = " ".join(f'{"_".join(header.split(" "))} "{value}"' for header, value in list(zip(headers, row)) )
+                        redis_line = f'HMSET {elem_id} {line}\n'
                         redis_script.write(redis_line)
                         if verbose:
                             print(redis_line)
