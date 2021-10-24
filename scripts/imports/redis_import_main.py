@@ -1,53 +1,78 @@
+import argparse
+import os
+
 import redis
 import csv
 import glob
 
-#EXECUTION PARAMETERS
-db_path = './tables/*.csv' #Define database path
-SCRIPT = True #generate a redis import script
-AUTO = False #automatically import db now to redis dbm
-DEBUG = False #debugging verbarose
+def main(db_path, script=True, auto=False, verbose=False):
+    # gets the name of the directory where the script is, to allow
+    # executing the script from anywhere.
+    directory = os.path.dirname(os.path.realpath(__file__))
+
+    #DATABASE IMPORT TO REDIS
+    csv_files = [f for f in glob.glob(os.path.join(db_path, "*.csv"))]
+    elem_id = 0
+
+    if auto: #Open Redis DBM
+        r = redis.Redis() #host='localhost', port=6379, db=0, password=None, socket_timeout=None
+    if script:
+        redis_script = open(os.path.join(directory, "import_db.redis"), "w")
+
+    for csv_file in csv_files:
+        #Read CSV File
+        try:
+            csvfile = open(csv_file, newline='')
+            csvreader = csv.reader(csvfile, delimiter=',')
+
+            first_row = True
+            for row in csvreader:
+                if first_row == True:
+                    headers = row
+                    first_row = False
+                else: #Add to Redis                 #TODO: add an xtra field for csv file of origin
+                    if auto: #Import directly 
+                        dict = {f'{"_".join(header.split(" "))}' : f'{value}' for header, value in list(zip(headers, row))}
+                        r.hmset(f'{elem_id}', dict)
+                        if verbose:
+                            print(r.hgetall(f'{elem_id}'))
+
+                    if script: #Create redis script: ex: HMSET elem_id field1 "Hello" field2 "World"
+                        dict = " ".join(f'{"_".join(header.split(" "))} "{value}"' for header, value in list(zip(headers, row)) )
+                        redis_line = f'HMSET {elem_id} {dict}\n'
+                        redis_script.write(redis_line)
+                        if verbose:
+                            print(redis_line)
+
+                    elem_id +=1 #at the end so we keep python index notation
+
+            csvfile.close()
+        except:
+            print(f'WARNING: the file {csv_file} was not read correctly. Possibily due to some UTF-8 character.')
+
+    if script:
+        redis_script.close()
 
 
-#DATABASE IMPORT TO REDIS
-csv_files = [f for f in glob.glob(db_path)]
-elem_id = 0
+if __name__ == "__main__":
+    # create a parser to change behaviour from outside.
+    parser = argparse.ArgumentParser()
+    parser.add_argument("tables", type=str, nargs=1,
+            help="if raised, the execution won't generate a redis import script (defaults to False).")
+    parser.add_argument('-s', "--no-script", default=False, action="store_true",
+            help="if raised, the execution won't generate a redis import script (defaults to False).")
+    parser.add_argument('-a', "--auto", default=False, action="store_true",
+            help="allows the script to automatically load the database inside a redis server. make sure a redis server is activated before hand. (defaults to False).")
+    parser.add_argument('-v', "--verbose", default=False, action="store_true",
+            help="turns on verbose (defaults to False).")
 
-if AUTO: #Open Redis DBM
-    r = redis.Redis() #host='localhost', port=6379, db=0, password=None, socket_timeout=None
-if SCRIPT:
-    redis_script = open("./scripts/import_db.redis", "w")
+    args = parser.parse_args()
 
-for csv_file in csv_files:
-    #Read CSV File
-    try:
-        csvfile = open(csv_file, newline='')
-        csvreader = csv.reader(csvfile, delimiter=',')
+    #EXECUTION PARAMETERS
+    script = not args.no_script
+    auto = args.auto
+    verbose = args.verbose
+    db_path = args.tables[0]
 
-        first_row = True
-        for row in csvreader:
-            if first_row == True:
-                headers = row
-                first_row = False
-            else: #Add to Redis                 #TODO: add an xtra field for csv file of origin
-                if AUTO: #Import directly 
-                    dict = {f'{"_".join(header.split(" "))}' : f'{value}' for header, value in list(zip(headers, row))}
-                    r.hmset(f'{elem_id}', dict)
-                    if DEBUG:
-                        print(r.hgetall(f'{elem_id}'))
-
-                if SCRIPT: #Create redis script: ex: HMSET elem_id field1 "Hello" field2 "World"
-                    dict = " ".join(f'{"_".join(header.split(" "))} "{value}"' for header, value in list(zip(headers, row)) )
-                    redis_line = f'HMSET {elem_id} {dict}\n'
-                    redis_script.write(redis_line)
-                    if DEBUG:
-                        print(redis_line)
-
-                elem_id +=1 #at the end so we keep python index notation
-
-        csvfile.close()
-    except:
-        print(f'WARNING: the file {csv_file} was not readed correctly. Possibily due to some UTF-8 caracter.')
-
-if SCRIPT:
-    redis_script.close()
+    # the actual redis database generation.
+    main(db_path, script=script, auto=auto, verbose=verbose)
