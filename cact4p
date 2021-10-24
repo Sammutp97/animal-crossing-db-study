@@ -39,3 +39,4 @@ psql \
   -v path_to_villagers="'$path_to/villagers.csv'" \
   -v path_to_wall_mounted="'$path_to/wall-mounted.csv'" \
   -v path_to_wallpaper="'$path_to/wallpaper.csv'" \
+> /dev/null
