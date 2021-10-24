@@ -601,7 +601,7 @@ CREATE TABLE reactions (
   source_notes VARCHAR(100),
   internal_id INTEGER,
   entry_id VARCHAR(100),
-  PRIMARY KEY (name)
+  PRIMARY KEY (entry_id)
 );
 
 COPY reactions(name,source,source_notes,internal_id,entry_id)
