@@ -227,6 +227,56 @@ FROM :path_to_fencing
 DELIMITER ','
 CSV HEADER;
 
+DROP TABLE IF EXISTS fish;
+CREATE TABLE fish (
+  nb INTEGER,
+  name VARCHAR(100),
+  sell INTEGER,
+  where_how VARCHAR(20),
+  shadow VARCHAR(20),
+  total_catches_to_unlock INTEGER,
+  spawn_rates VARCHAR(10),
+  rain_snow_catch_up BOOLEAN,
+  nh_jan VARCHAR(25),
+  nh_feb VARCHAR(25),
+  nh_mar VARCHAR(25),
+  nh_apr VARCHAR(25),
+  nh_may VARCHAR(25),
+  nh_jun VARCHAR(25),
+  nh_jul VARCHAR(25),
+  nh_aug VARCHAR(25),
+  nh_sep VARCHAR(25),
+  nh_oct VARCHAR(25),
+  nh_nov VARCHAR(25),
+  nh_dec VARCHAR(25),
+  sh_jan VARCHAR(25),
+  sh_feb VARCHAR(25),
+  sh_mar VARCHAR(25),
+  sh_apr VARCHAR(25),
+  sh_may VARCHAR(25),
+  sh_jun VARCHAR(25),
+  sh_jul VARCHAR(25),
+  sh_aug VARCHAR(25),
+  sh_sep VARCHAR(25),
+  sh_oct VARCHAR(25),
+  sh_nov VARCHAR(25),
+  sh_dec VARCHAR(25),
+  color_1 VARCHAR(30),
+  color_2 VARCHAR(30),
+  size_of VARCHAR(20),
+  lighting_type VARCHAR(20),
+  icon_filename VARCHAR(20),
+  critterpedia_filename VARCHAR(20),
+  furniture_filename VARCHAR(30),
+  internal_id INTEGER,
+  entry_id VARCHAR(20),
+  PRIMARY KEY (entry_id)
+);
+COPY fish(nb,name,sell,where_how,shadow,total_catches_to_unlock,spawn_rates,rain_snow_catch_up,nh_jan,nh_feb,nh_mar,nh_apr,nh_may,nh_jun,nh_jul,nh_aug,nh_sep,nh_oct,nh_nov,nh_dec,sh_jan,sh_feb,sh_mar,sh_apr,sh_may,sh_jun,sh_jul,sh_aug,sh_sep,sh_oct,sh_nov,sh_dec,color_1,color_2,size_of,lighting_type,icon_filename,critterpedia_filename,furniture_filename,internal_id,entry_id)
+FROM :path_to_fish
+DELIMITER ','
+CSV HEADER;
+
 DROP TABLE IF EXISTS floors;
 CREATE TABLE floors (
   name VARCHAR(100),
