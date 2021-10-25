@@ -1,0 +1,6 @@
+#! /usr/bin/bash
+# a simple tool to see an entire .csv table in the terminal.
+# doesn't work perfectly when applied on very big tables,
+# e.g. with long strings.
+
+perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K

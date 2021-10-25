@@ -4,30 +4,33 @@ The goal of this study is to shed light on the common points and the differences
 The database used in the study is the [animal-crossing database](https://www.kaggle.com/jessicali9530/animal-crossing-new-horizons-nookplaza-dataset) on Kaggle.
 
 ## Table Of Content.
-- [0  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#0-organization-of-the-repository-toc) Organization of the repository
-- [1  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#1-prerequisites-toc)                  Prerequisites.
-- [2  ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#2-import-the-database-toc)            Import the database...
-- [2.1](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#21--into-postgresql-toc)               ... into PostGreSQL.
-- [2.2](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#22--into-redis-toc)                    ... into Redis.
+* **0** [**Organization of the repository** ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#0-organization-of-the-repository-toc)
+* **1** [**Prerequisites.**                 ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#1-prerequisites-toc)
+* **2** [**Import the database...**         ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#2-import-the-database-toc)
+  - **2.1** [**... into PostGreSQL.**          ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#21--into-postgresql-toc)
+  - **2.2** [**... into Redis.**               ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#22--into-redis-toc)
+* **3** [**Inspect the tables manually.**   ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#3-inspect-the-tables-manually-toc)
 
 ## 0. Organization of the repository [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 
 The repository is organized as follows:  
-📦 animal-crossing-db-study  
-┣ 📂 [`tables`]  
+📦 ***animal-crossing-db-study***  
+┣ 📂 [`tables`]  -- *all the tables from **Animal Crossing New Horizons,** from Kaggle.*  
 ┃ ┣ 📜 [`accessories.csv`]  
 ┃ ┣ 📜 [`achievements.csv`]  
 ┃ ┣ ...  
 ┃ ┗ 📜 [`wallpaper.csv`]  
 ┣ 📂 [`scripts`]  
 ┃ ┣ 📂 [`imports`]  
-┃ ┃ ┣ 📜 [`redis_import_main.py`]  
-┃ ┃ ┣ 📜 [`cact4p.sql`]  
+┃ ┃ ┣ 📜 [`redis_import_main.py`]  -- *a python script that generates a `.redis` file or sends tables to a `redis` server.*  
+┃ ┃ ┣ 📜 [`cact4p.sql`]  -- *a `.sql` script that creates and loads all the tables from [`tables`].*  
 ┃ ┣ 📜 ...  
 ┃ ┗ 📜 [`analysis.py`]  
 ┣ 📜 LICENCE  
 ┣ 📜 README.md  
-┗ 📜 [`cact4p`]  
+┗ 📜 [`cact4p`]  -- *a bash wrapper to use [`cact4p.sql`] more easily.*  
+┗ 📜 [`seecsv`]  -- *a bash tool to manually look at the tables in `.csv` files.*  
+┗ 📜 [`relations.md`]  -- *a summary of the dataset and the relations between the tables.*
 
 ## 1. Prerequisites. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 Install PostGreSQL: [tutorial](https://supaerodatascience.github.io/OBD/0_2_postgres.html#postgresql-installation)  
@@ -61,6 +64,14 @@ python3 scripts/imports/redis_import_main.py tables
 ```
 Use `python3 scripts/imports/redis_import_main.py -h` to learn more about the use of the python script.
 
+## 3. Inspect the tables manually. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
+If you want to inspect the tables in [`tables`], it can be quite tideous in the terminal without the proper tool.  
+This is why we introduce [`seecsv`], a simple tool to see any `.csv` table inside the terminal.  
+*Might not work perfectly with large tables, e.g. with pretty long strings*, but it can give a good idea of what is inside a given table.  
+To use it, simply run the following: 
+```bash
+./seecsv /path/to/table.csv
+```
 
 [`tables`]: tables
 [`accessories.csv`]: tables/accessories.csv
@@ -73,3 +84,5 @@ Use `python3 scripts/imports/redis_import_main.py -h` to learn more about the us
 [`cact4p.sql`]: scripts/imports/cact4p.sql
 [`cact4p`]: scripts/imports/cact4p
 [`analysis.py`]: scripts/analysis.py
+[`relations.md`]: relations.md
+[`seecsv`]: seecsv
