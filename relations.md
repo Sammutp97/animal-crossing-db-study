@@ -1,3 +1,4 @@
+```
 catalog:               if we can buy items.
 diy:                   if items can be crafted.
 source:                where to buy an item.
@@ -279,3 +280,4 @@ furniture_list: list of internal ids?
 |     hha_concept_1, hha_concept_2, hha_series, tag,        |
 |     version, filename                                     |
 +-----------------------------------------------------------+
+```
