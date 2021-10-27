@@ -22,9 +22,10 @@ The repository is organized as follows:
 ┃ ┗ 📜 [`wallpaper.csv`]  
 ┣ 📂 [`scripts`]  
 ┃ ┣ 📂 [`imports`]  
-┃ ┃ ┣ 📜 [`redis_import_main.py`]  -- *a python script that generates a `.redis` file or sends tables to a `redis` server.*  
+┃ ┃ ┣ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
 ┃ ┃ ┣ 📜 [`cact4p.sql`]  -- *a `.sql` script that creates and loads all the tables from [`tables`].*  
 ┃ ┣ 📜 ...  
+┃ ┣ 📜 [`extract_values.py`]  -- *builds a '.json' containing all possible values, by column*  
 ┃ ┗ 📜 [`analysis.py`]  
 ┣ 📜 LICENCE  
 ┣ 📜 README.md  
@@ -50,6 +51,8 @@ and then
 ```bash
 ./cact4p tables
 ```
+[`cact4p`] calls the [`cact4p.sql`] script which creates and fills all the tables for the user.  
+"*cact4p*" stands for *Create Animal Crossing's Tables for (4) Postgresql*.
 
 ### 2.2. ... into Redis. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 
@@ -73,6 +76,12 @@ To use it, simply run the following:
 ./seecsv /path/to/table.csv
 ```
 
+One might also want to look at the possible values seen in the tables, e.g. all possible names, all possible colors, ...  
+To do so, you can use the [`extract_values.py`] script in [`scripts`] with
+```bash
+python3 scripts/extract_values.py tables
+```
+
 [`tables`]: tables
 [`accessories.csv`]: tables/accessories.csv
 [`achievements.csv`]: tables/achievements.csv
@@ -80,9 +89,9 @@ To use it, simply run the following:
 [`scripts`]: scripts
 [`imports`]: scripts/imports
 [`redis_import_main.py`]: scripts/imports/redis_import_main.py
-[`import_db.redis`]: scripts/imports/import_db.redis
 [`cact4p.sql`]: scripts/imports/cact4p.sql
-[`cact4p`]: scripts/imports/cact4p
+[`cact4p`]: cact4p
 [`analysis.py`]: scripts/analysis.py
+[`extract_values.py`]: scripts/extract_values.py
 [`relations.md`]: relations.md
 [`seecsv`]: seecsv
