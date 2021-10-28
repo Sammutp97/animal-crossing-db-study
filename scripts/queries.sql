@@ -285,3 +285,42 @@ SELECT name, buy, sell, catalog, pattern, diy, source, source_notes, outdoor FRO
 -- wallpaper
   -- generalities
 SELECT name, buy, sell, vfx, color_1, color_2, catalog, source, window_type, window_color, pane_type, curtain_type, curtain_color, ceiling_type FROM wallpaper WHERE hha_concept_1='zen-style' AND tag='Nature Walls' AND diy=false;
+
+
+
+
+-- drop lines (https://sql.sh/cours/delete)
+--DELETE FROM `table`
+--WHERE condition;
+--
+-- insert lines (https://sql.sh/cours/insert-into)
+--INSERT INTO table VALUES ('valeur 1', 'valeur 2', ...);
+--INSERT INTO table (nom_colonne_1, nom_colonne_2, ...
+--	 VALUES ('valeur 1', 'valeur 2', ...);
+--INSERT INTO client (prenom, nom, ville, age)
+--	 VALUES
+--	 ('Rébecca', 'Armand', 'Saint-Didier-des-Bois', 24),
+--	 ('Aimée', 'Hebert', 'Marigny-le-Châtel', 36),
+--	 ('Marielle', 'Ribeiro', 'Maillères', 27),
+--	 ('Hilaire', 'Savary', 'Conie-Molitard', 58);
+--
+-- update table (https://sql.sh/cours/update)
+--UPDATE table
+--SET colonne_1 = 'valeur 1', colonne_2 = 'valeur 2', colonne_3 = 'valeur 3'
+--WHERE condition
+--
+-- add column (https://sql.sh/cours/alter-table)
+--ALTER TABLE nom_table
+--ADD nom_colonne type_donnees
+--
+-- delete column (https://sql.sh/cours/alter-table)
+--ALTER TABLE nom_table
+--DROP COLUMN nom_colonne
+--
+-- modify column (https://sql.sh/cours/alter-table)
+--ALTER TABLE nom_table
+--ALTER COLUMN nom_colonne TYPE type_donnees
+--
+-- rename column (https://sql.sh/cours/alter-table)
+--ALTER TABLE nom_table
+--RENAME COLUMN colonne_ancien_nom TO colonne_nouveau_nom
