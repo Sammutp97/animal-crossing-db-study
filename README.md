@@ -28,18 +28,18 @@ The repository is organized as follows:
 ┃ ┃ ┗ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
 ┃ ┣ 📂 [`queries`]  
 ┃ ┃ ┗ 📂 [`psql`]  
-┃ ┃   ┣ 📂 [`query_00`]  
-┃ ┃   ┃ ┣ 📜 query.psql  -- *a query*  
-┃ ┃   ┃ ┗ 📜 question.txt  -- *a question*  
-┃ ┃   ┣ ...  
-┃ ┃   ┗ 📂 [`query_38`]  
-┃ ┃     ┣ 📜 query.psql  -- *a query*  
-┃ ┃     ┗ 📜 question.txt  -- *a question*  
+┃ ┃ &nbsp;&nbsp; ┣ 📂 [`query_00`]  
+┃ ┃ &nbsp;&nbsp; ┃ ┣ 📜 query.psql  -- *a query*  
+┃ ┃ &nbsp;&nbsp; ┃ ┗ 📜 question.txt  -- *a question*  
+┃ ┃ &nbsp;&nbsp; ┣ ...  
+┃ ┃ &nbsp;&nbsp; ┗ 📂 [`query_38`]  
+┃ ┃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┣ 📜 query.psql  -- *a query*  
+┃ ┃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┗ 📜 question.txt  -- *a question*  
 ┃ ┗ 📜 [`queries.sql`]  -- *all the queries and their associated questions*  
 ┣ 📜 LICENCE  
 ┣ 📜 README.md  
-┗ 📜 [`cact4p`]  -- *a bash wrapper to use [`cact4p.sql`] more easily.*  
-┗ 📜 [`seecsv`]  -- *a bash tool to manually look at the tables in `.csv` files.*  
+┣ 📜 [`cact4p`]  -- *a bash wrapper to use [`cact4p.sql`] more easily.*  
+┣ 📜 [`seecsv`]  -- *a bash tool to manually look at the tables in `.csv` files.*  
 ┗ 📜 [`relations.md`]  -- *a summary of the dataset and the relations between the tables.*
 
 ## 1. Prerequisites. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
@@ -91,7 +91,7 @@ To do so, you can use the [`extract_values.py`] script in [`scripts`] with
 python3 scripts/extract_values.py tables
 ```
 
-## 3. Execute and time the queries. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
+## 4. Execute and time the queries. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 For the `psql` part, one can easily execute and time the queries of the repo with the following command:
 ```bash
 ./xquery scripts/queries/psql/query_<nb>
@@ -111,5 +111,5 @@ For the `psql` part, one can easily execute and time the queries of the repo wit
 [`seecsv`]: seecsv
 [`queries`]: scripts/queries
 [`psql`]: scripts/queries/psql
-[`query_00`]: scripts/queries/psql/query_OO
+[`query_00`]: scripts/queries/psql/query_00
 [`query_38`]: scripts/queries/psql/query_38
