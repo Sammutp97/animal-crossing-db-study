@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, color_1, color_2, source, outdoor FROM housewares WHERE hha_concept_1='expensive' AND tag='Toy';

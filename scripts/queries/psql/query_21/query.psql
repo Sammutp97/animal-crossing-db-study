@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, color_1, color_2, source, outdoor, hha_concept_1, hha_concept_2, speaker_type, lighting_type, tag FROM miscellaneous;

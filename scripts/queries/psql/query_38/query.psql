@@ -1,0 +1,1 @@
+SELECT name, buy, sell, vfx, color_1, color_2, catalog, source, window_type, window_color, pane_type, curtain_type, curtain_color, ceiling_type FROM wallpaper WHERE hha_concept_1='zen-style' AND tag='Nature Walls' AND diy=false;

@@ -1,0 +1,7 @@
+SELECT name, nb_1, material_1, nb_2, material_2, nb_3, material_3, nb_4, material_4, nb_5, material_5, nb_6, material_6
+FROM recipes
+WHERE name IN (
+	SELECT name
+	FROM accessories
+	WHERE diy=true
+);

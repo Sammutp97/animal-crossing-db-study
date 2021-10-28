@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, vfx, color_1, color_2, tag, source FROM floors WHERE hha_concept_1='expensive' AND hha_concept_2='facility';

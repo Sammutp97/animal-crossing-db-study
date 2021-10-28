@@ -1,0 +1,1 @@
+SELECT name, diy, buy, sell, catalog, source, source_notes, color_1, color_2 FROM rugs WHERE size_of='3x3' AND hha_concept_1='living room' AND tag='Pattern Rugs';

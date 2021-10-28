@@ -1,0 +1,1 @@
+SELECT name, sell, miles_price, source, source_notes, tag, color_1, color_2 FROM other WHERE stack_size<30;

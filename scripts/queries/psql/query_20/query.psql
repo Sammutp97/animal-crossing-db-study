@@ -1,0 +1,1 @@
+SELECT name, sell, color_1, color_2, total_catches_to_unlock, spawn_rates FROM insects WHERE where_how='On palm trees' AND weather='Any weather' ORDER BY total_catches_to_unlock, name;

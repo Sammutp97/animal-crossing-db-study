@@ -1,0 +1,4 @@
+What are all possible variations for the accessories, sorted in
+alphabetical order?
+can be extended to any column of any relation, to gain access to
+what is in the given column of the given relation.

@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, color_1, color_2, source, source_notes, size_of FROM music;

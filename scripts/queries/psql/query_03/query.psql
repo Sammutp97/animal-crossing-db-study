@@ -1,0 +1,8 @@
+SELECT name, variation, source, sell-buy AS profit
+FROM accessories
+WHERE buy<>-1
+AND sell-buy=(
+	SELECT MAX(sell-buy)
+	FROM accessories
+	WHERE buy<>-1
+);

@@ -1,0 +1,1 @@
+SELECT name, personality, hobby, birthday, catchphrase, favorite_song, style_1, style_2, color_1, color_2, wallpaper, furniture_list FROM villagers WHERE species='Bird' AND gender='Male' AND flooring='tatami';

@@ -1,0 +1,27 @@
+SELECT name, nb_1, material_1, nb_2, material_2, nb_3, material_3, nb_4, material_4, nb_5, material_5, nb_6, material_6
+FROM recipes
+WHERE name IN (
+	SELECT name
+	FROM (
+		(SELECT name, diy FROM accessories   AS a) UNION ALL
+		(SELECT name, diy FROM bags          AS b) UNION ALL
+		(SELECT name, diy FROM bottoms       AS b) UNION ALL
+		(SELECT name, diy FROM dress_up      AS d) UNION ALL
+		(SELECT name, diy FROM fencing       AS f) UNION ALL
+		(SELECT name, diy FROM floors        AS f) UNION ALL
+		(SELECT name, diy FROM headwear      AS h) UNION ALL
+		(SELECT name, diy FROM housewares    AS h) UNION ALL
+		(SELECT name, diy FROM miscellaneous AS m) UNION ALL
+		(SELECT name, diy FROM other         AS o) UNION ALL
+		(SELECT name, diy FROM photos        AS p) UNION ALL
+		(SELECT name, diy FROM rugs          AS r) UNION ALL
+		(SELECT name, diy FROM shoes         AS s) UNION ALL
+		(SELECT name, diy FROM socks         AS s) UNION ALL
+		(SELECT name, diy FROM tools         AS t) UNION ALL
+		(SELECT name, diy FROM tops          AS t) UNION ALL
+		(SELECT name, diy FROM umbrellas     AS u) UNION ALL
+		(SELECT name, diy FROM wall_mounted  AS w) UNION ALL
+		(SELECT name, diy FROM wallpaper     AS w)
+	) AS u
+	WHERE diy=true
+);

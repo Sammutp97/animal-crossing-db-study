@@ -1,0 +1,1 @@
+SELECT name, variation, sell, seasonal_availability, villager_equippable, primary_shape, secondary_shape, color_1, color_2, label_themes FROM dress_up WHERE diy=false AND source='Recycle bin';

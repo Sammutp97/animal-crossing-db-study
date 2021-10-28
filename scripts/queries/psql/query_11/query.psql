@@ -1,0 +1,1 @@
+SELECT name, source FROM construction WHERE category='Bridge' AND buy<100000;

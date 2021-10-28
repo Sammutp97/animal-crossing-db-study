@@ -1,0 +1,5 @@
+what are the names and recipes of all craftable accessories?
+can be extended to all craftable item categories, i.e.
+accessories, bags, bottoms, dress_up, fencing, floors, headwear,
+housewares, miscellaneous, other, photos, rugs, shoes, socks,
+tools, tops, umbrellas, wall_mounted, wallpaper

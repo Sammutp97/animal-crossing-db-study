@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, source, source_notes FROM posters WHERE size_of='1x1' AND color_1='Blue' AND color_2='Gray';

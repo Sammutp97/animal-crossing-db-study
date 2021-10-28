@@ -1,0 +1,1 @@
+SELECT name, variation, buy, sell, color_1, color_2, source, set_of, stack_size FROM tools WHERE diy=true AND uses='Unlimited';

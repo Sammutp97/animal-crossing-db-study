@@ -1,0 +1,1 @@
+SELECT name, sell, color_1, color_2, shadow, total_catches_to_unlock, spawn_rates, rain_snow_catch_up FROM fish WHERE where_how='Sea' AND lighting_type='Fluorescent' ORDER BY total_catches_to_unlock, name;

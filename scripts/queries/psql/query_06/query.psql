@@ -1,0 +1,18 @@
+SELECT nb,
+       name,
+       award_criteria,
+       num_of_tiers,
+       CASE WHEN num_of_tiers=1 THEN tier_1
+            WHEN num_of_tiers=2 THEN tier_2
+            WHEN num_of_tiers=3 THEN tier_3
+            WHEN num_of_tiers=4 THEN tier_4
+            WHEN num_of_tiers=5 THEN tier_5
+       ELSE NULL END AS condition,
+       CASE WHEN num_of_tiers=1 THEN reward_tier_1
+            WHEN num_of_tiers=2 THEN reward_tier_1+reward_tier_2
+            WHEN num_of_tiers=3 THEN reward_tier_1+reward_tier_2+reward_tier_3
+            WHEN num_of_tiers=4 THEN reward_tier_1+reward_tier_2+reward_tier_3+reward_tier_4
+            WHEN num_of_tiers=5 THEN reward_tier_1+reward_tier_2+reward_tier_3+reward_tier_4+reward_tier_5
+            WHEN num_of_tiers=6 THEN reward_tier_1+reward_tier_2+reward_tier_3+reward_tier_4+reward_tier_5+reward_tier_6
+       ELSE NULL END AS cumulative_reward
+FROM achievements;

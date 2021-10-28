@@ -1,0 +1,1 @@
+SELECT name, category, sell, source, recipes_to_unlock FROM recipes;

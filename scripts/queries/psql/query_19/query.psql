@@ -1,0 +1,8 @@
+SELECT
+	bo.name, bo.color_1, bo.color_2,
+	t.name, t.color_1, t.color_2
+FROM
+ bottoms       AS bo,
+ tops          AS t
+WHERE (bo.color_1='Black' OR bo.color_2='Black')
+AND (t.color_1='Black' OR t.color_2='Black');

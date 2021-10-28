@@ -1,0 +1,1 @@
+SELECT name, sell, color_1, color_2, size_of FROM fossils WHERE museum='Room 2';

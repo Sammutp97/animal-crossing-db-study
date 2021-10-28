@@ -10,6 +10,7 @@ The database used in the study is the [animal-crossing database](https://www.kag
   - **2.1** [**... into PostGreSQL.**          ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#21--into-postgresql-toc)
   - **2.2** [**... into Redis.**               ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#22--into-redis-toc)
 * **3** [**Inspect the tables manually.**   ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#3-inspect-the-tables-manually-toc)
+* **4** [**Execute and time the queries.**   ](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#4-execute-and-time-the-queries-toc)
 
 ## 0. Organization of the repository [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 
@@ -21,12 +22,20 @@ The repository is organized as follows:
 ┃ ┣ ...  
 ┃ ┗ 📜 [`wallpaper.csv`]  
 ┣ 📂 [`scripts`]  
-┃ ┣ 📂 [`imports`]  
-┃ ┃ ┣ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
-┃ ┃ ┣ 📜 [`cact4p.sql`]  -- *a `.sql` script that creates and loads all the tables from [`tables`].*  
-┃ ┣ 📜 ...  
 ┃ ┣ 📜 [`extract_values.py`]  -- *builds a '.json' containing all possible values, by column*  
-┃ ┗ 📜 [`analysis.py`]  
+┃ ┣ 📂 [`imports`]  
+┃ ┃ ┣ 📜 [`cact4p.sql`]  -- *a `.sql` script that creates and loads all the tables from [`tables`].*  
+┃ ┃ ┗ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
+┃ ┣ 📂 [`queries`]  
+┃ ┃ ┗ 📂 [`psql`]  
+┃ ┃   ┣ 📂 [`query_00`]  
+┃ ┃   ┃ ┣ 📜 query.psql  -- *a query*  
+┃ ┃   ┃ ┗ 📜 question.txt  -- *a question*  
+┃ ┃   ┣ ...  
+┃ ┃   ┗ 📂 [`query_38`]  
+┃ ┃     ┣ 📜 query.psql  -- *a query*  
+┃ ┃     ┗ 📜 question.txt  -- *a question*  
+┃ ┗ 📜 [`queries.sql`]  -- *all the queries and their associated questions*  
 ┣ 📜 LICENCE  
 ┣ 📜 README.md  
 ┗ 📜 [`cact4p`]  -- *a bash wrapper to use [`cact4p.sql`] more easily.*  
@@ -82,6 +91,12 @@ To do so, you can use the [`extract_values.py`] script in [`scripts`] with
 python3 scripts/extract_values.py tables
 ```
 
+## 3. Execute and time the queries. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
+For the `psql` part, one can easily execute and time the queries of the repo with the following command:
+```bash
+./xquery scripts/queries/psql/query_<nb>
+```
+
 [`tables`]: tables
 [`accessories.csv`]: tables/accessories.csv
 [`achievements.csv`]: tables/achievements.csv
@@ -91,7 +106,10 @@ python3 scripts/extract_values.py tables
 [`redis_import_main.py`]: scripts/imports/redis_import_main.py
 [`cact4p.sql`]: scripts/imports/cact4p.sql
 [`cact4p`]: cact4p
-[`analysis.py`]: scripts/analysis.py
 [`extract_values.py`]: scripts/extract_values.py
 [`relations.md`]: relations.md
 [`seecsv`]: seecsv
+[`queries`]: scripts/queries
+[`psql`]: scripts/queries/psql
+[`query_00`]: scripts/queries/psql/query_OO
+[`query_38`]: scripts/queries/psql/query_38

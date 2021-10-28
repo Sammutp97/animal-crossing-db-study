@@ -1,0 +1,3 @@
+SELECT name, variation, sell, miles_price, seasonal_availability, villager_equippable, color_1, color_2
+FROM accessories
+WHERE diy=true;

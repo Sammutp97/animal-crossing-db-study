@@ -1,0 +1,1 @@
+SELECT v.name, v.favorite_song, m.source, m.buy FROM villagers AS v, music AS m WHERE v.favorite_song=m.name ORDER BY (m.name, v.name);

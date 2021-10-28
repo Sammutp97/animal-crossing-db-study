@@ -1,0 +1,1 @@
+SELECT name, sell, source_notes FROM fencing;

@@ -1,0 +1,1 @@
+SELECT name, buy, sell, color_1, color_2 FROM umbrellas WHERE diy=false AND source='Bug-Off' AND size_of='1x1';

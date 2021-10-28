@@ -1,0 +1,6 @@
+SELECT name, category, buy, sell, catalog, artist, museum_description
+FROM art
+WHERE size_of='1x1'
+AND hha_concept_1='expensive'
+AND hha_concept_2='folk art'
+AND tag='Sculpture';

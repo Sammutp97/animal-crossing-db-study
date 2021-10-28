@@ -1,0 +1,2 @@
+SELECT AVG(sell-CASE WHEN buy=-1 THEN 0 ELSE buy END)
+FROM accessories;

@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, color_1, color_2, body_title FROM photos WHERE size_of='1x1' AND source<>'High Friendship';

@@ -1,0 +1,3 @@
+what buyable accessory can be sold for the highest profit?
+can be extended to all buyable items, i.e. almost all tables,
+except reactions, villagers, recipes, ...

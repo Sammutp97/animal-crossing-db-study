@@ -1,0 +1,1 @@
+SELECT name, buy, sell, catalog, pattern, diy, source, source_notes, outdoor FROM wall_mounted WHERE size_of='1x1' AND color_1='Beige' AND color_2='Yellow';
