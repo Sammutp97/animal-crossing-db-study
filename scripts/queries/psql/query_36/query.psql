@@ -4,5 +4,4 @@ SELECT DISTINCT v.name,
 	CASE WHEN f.buy<>-1 AND w.buy<>-1 THEN f.buy+w.buy WHEN f.buy<>-1 THEN f.buy WHEN w.buy<>-1 THEN w.buy ELSE 0 END AS total
 FROM villagers AS v, floors AS f, wallpaper AS w
 WHERE v.flooring=f.name AND v.wallpaper=w.name
---FROM (villagers v JOIN floors f ON v.flooring=f.name) JOIN wallpaper w ON v.wallpaper=w.name
 ORDER BY f.diy, w.diy;

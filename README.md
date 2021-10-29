@@ -26,21 +26,24 @@ The repository is organized as follows:
 ┃ ┣ 📂 [`imports`]  
 ┃ ┃ ┣ 📜 [`cact4p.sql`]  -- *a `.sql` script that creates and loads all the tables from [`tables`].*  
 ┃ ┃ ┗ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
-┃ ┣ 📂 [`queries`]  
-┃ ┃ ┗ 📂 [`psql`]  
-┃ ┃ &nbsp;&nbsp; ┣ 📂 [`query_00`]  
-┃ ┃ &nbsp;&nbsp; ┃ ┣ 📜 query.psql  -- *a query*  
-┃ ┃ &nbsp;&nbsp; ┃ ┗ 📜 question.txt  -- *a question*  
-┃ ┃ &nbsp;&nbsp; ┣ ...  
-┃ ┃ &nbsp;&nbsp; ┗ 📂 [`query_38`]  
-┃ ┃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┣ 📜 query.psql  -- *a query*  
-┃ ┃ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ┗ 📜 question.txt  -- *a question*  
-┃ ┗ 📜 [`queries.sql`]  -- *all the queries and their associated questions*  
+┃ ┗ 📂 [`queries`]  
+┃ &nbsp;&nbsp; ┣ 📂 [`psql`]  
+┃ &nbsp;&nbsp; ┃ ┣ 📜 [`alt-table-timings.txt`]  -- *a summary of timings for altering queries.*  
+┃ &nbsp;&nbsp; ┃ ┣ 📜 [`queries.sql`]  -- *all the queries and their associated questions*  
+┃ &nbsp;&nbsp; ┃ ┣ 📂 [`query_00`]  
+┃ &nbsp;&nbsp; ┃ ┃ ┣ 📜 query.psql  -- *a query.*  
+┃ &nbsp;&nbsp; ┃ ┃ ┗ 📜 question.txt  -- *a question.*  
+┃ &nbsp;&nbsp; ┃ ┣ ...  
+┃ &nbsp;&nbsp; ┃ ┗ 📂 [`query_38`]  
+┃ &nbsp;&nbsp; ┃ &nbsp;&nbsp; ┣ 📜 query.psql  -- *a query.*  
+┃ &nbsp;&nbsp; ┃ &nbsp;&nbsp; ┗ 📜 question.txt  -- *a question.*  
+┃ &nbsp;&nbsp; ┗ 📜 [`redis_queries.py`]  -- *the redis version of the queries.*  
 ┣ 📜 LICENCE  
 ┣ 📜 README.md  
 ┣ 📜 [`cact4p`]  -- *a bash wrapper to use [`cact4p.sql`] more easily.*  
 ┣ 📜 [`seecsv`]  -- *a bash tool to manually look at the tables in `.csv` files.*  
-┗ 📜 [`relations.md`]  -- *a summary of the dataset and the relations between the tables.*
+┣ 📜 [`relations.md`]  -- *a summary of the dataset and the relations between the tables.*  
+┗ 📜 [`xquery`]  -- *a bash tool to execute and time psql queries.*  
 
 ## 1. Prerequisites. [[toc](https://github.com/AntoineStevan/animal-crossing-db-study/tree/main/#table-of-content)]
 Install PostGreSQL: [tutorial](https://supaerodatascience.github.io/OBD/0_2_postgres.html#postgresql-installation)  
@@ -109,7 +112,11 @@ For the `psql` part, one can easily execute and time the queries of the repo wit
 [`extract_values.py`]: scripts/extract_values.py
 [`relations.md`]: relations.md
 [`seecsv`]: seecsv
+[`xquery`]: xquery
 [`queries`]: scripts/queries
 [`psql`]: scripts/queries/psql
 [`query_00`]: scripts/queries/psql/query_00
 [`query_38`]: scripts/queries/psql/query_38
+[`alt-table-timings.txt`]: scripts/queries/psql/alt-table-timings.txt
+[`queries.sql`]: scripts/queries/psql/queries.sql
+[`redis_queries.py`]: scripts/queries/redis_queries.py

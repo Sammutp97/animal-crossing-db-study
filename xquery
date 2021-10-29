@@ -66,19 +66,18 @@ done;
 
 # divide by number of samples with awk to get the mean.
 mean=$(awk -v a="$tot" -v b=${#TIMINGS[@]} 'BEGIN { print  ( a / b ) }')
-echo "tot: $tot ms"
-echo "mean: $mean ms"
 
 # compute the total sum of squared errors to the mean.
-tot=0
+mse=0
 for((i=0;i<$n;i++))
 do
 	# the error is here the difference between the time and the mean.
 	err=$(awk -v a=${TIMINGS[$i]} -v b=$mean  'BEGIN { print  ( a - b ) }')
 	# add the square of the error to the total sum of squared errors.
-	tot=$(awk -v a=$err -v b=$err 'BEGIN { print  ( a * b ) }')
+	mse=$(awk -v a=$err -v b=$err 'BEGIN { print  ( a * b ) }')
 done;
 # divide by the number of sample times to get the variance.
-var=$(awk -v a="$tot" -v b=${#TIMINGS[@]} 'BEGIN { print  ( a / b ) }')
-echo "var: $var ms*ms"
+std=$(awk -v a="$mse" -v b=${#TIMINGS[@]} 'BEGIN { print  sqrt( a / b ) }')
 
+echo "tot: $tot ms in ${#TIMINGS[@]} samples"
+echo "time: $mean +/- $std ms"
