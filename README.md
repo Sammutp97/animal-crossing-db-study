@@ -28,7 +28,7 @@ The repository is organized as follows:
 ┃ ┃ ┗ 📜 [`redis_import_main.py`]  -- *generates a `.redis` file or sends tables to a `redis` server.*  
 ┃ ┗ 📂 [`queries`]  
 ┃ &nbsp;&nbsp; ┣ 📂 [`psql`]  
-┃ &nbsp;&nbsp; ┃ ┣ 📜 [`alt-table-timings.txt`]  -- *a summary of timings for altering queries.*  
+┃ &nbsp;&nbsp; ┃ ┣ 📜 [`alt-tables-timings.txt`]  -- *a summary of timings for altering queries.*  
 ┃ &nbsp;&nbsp; ┃ ┣ 📜 [`queries.sql`]  -- *all the queries and their associated questions*  
 ┃ &nbsp;&nbsp; ┃ ┣ 📂 [`query_00`]  
 ┃ &nbsp;&nbsp; ┃ ┃ ┣ 📜 query.psql  -- *a query.*  
@@ -117,6 +117,6 @@ For the `psql` part, one can easily execute and time the queries of the repo wit
 [`psql`]: scripts/queries/psql
 [`query_00`]: scripts/queries/psql/query_00
 [`query_38`]: scripts/queries/psql/query_38
-[`alt-table-timings.txt`]: scripts/queries/psql/alt-table-timings.txt
+[`alt-tables-timings.txt`]: scripts/queries/psql/alt-tables-timings.txt
 [`queries.sql`]: scripts/queries/psql/queries.sql
 [`redis_queries.py`]: scripts/queries/redis_queries.py
