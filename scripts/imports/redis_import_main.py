@@ -13,6 +13,7 @@ def main(db_path, script=False, auto=False, verbose=False, clean=False):
 
     #DATABASE IMPORT TO REDIS
     csv_files = [f for f in glob.glob(os.path.join(db_path, "*.csv"))]
+    csv_files.sort()
     elem_id = 0
     output_filename = os.path.join(directory, "import_db.redis")
 

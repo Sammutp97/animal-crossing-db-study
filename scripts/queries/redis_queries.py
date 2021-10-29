@@ -218,3 +218,114 @@ for key in bags :
         result10.append(r.hmget(key,'Color_2')[0].decode())
         results10.append(result10)
 print("Query 10 :", results10)
+
+#Query 11
+results11 = []
+for key in bottoms :
+    elem_decoded = r.hmget(key,'DIY')[0].decode()
+    elem_decoded1 = r.hmget(key,'Source')[0].decode()
+    elem_decoded2 = r.hmget(key,'Label_Themes')[0].decode()
+    if (elem_decoded == 'No') and (elem_decoded1 == 'Recycle bin') and (elem_decoded2 == 'goth') :
+        result11 = []
+        result11.append(r.hmget(key,'Name')[0].decode())
+        result11.append(r.hmget(key,'Variation')[0].decode())
+        result11.append(r.hmget(key,'Sell')[0].decode())
+        result11.append(r.hmget(key,'Seasonal_Availability')[0].decode())
+        result11.append(r.hmget(key,'Villager_Equippable')[0].decode())
+        result11.append(r.hmget(key,'Color_1')[0].decode())
+        result11.append(r.hmget(key,'Color_2')[0].decode())
+        results11.append(result11)
+print("Query 11 :", results11)
+
+#Query 12
+results12 = []
+for key in construction :
+    elem_decoded = r.hmget(key,'Category')[0].decode()
+    elem_decoded1 = int(r.hmget(key,'Buy')[0].decode())
+    if (elem_decoded == 'Bridge') and (elem_decoded1 < 100000) :
+        result12 = []
+        result12.append(r.hmget(key,'Name')[0].decode())
+        result12.append(r.hmget(key,'Source')[0].decode())
+        results12.append(result12)
+print("Query 12 :", results12)
+
+#Query 13
+results13 = []
+for key in dress_up :
+    elem_decoded = r.hmget(key,'DIY')[0].decode()
+    elem_decoded1 = r.hmget(key,'Source')[0].decode()
+    if (elem_decoded == 'No') and (elem_decoded1 == 'Recycle bin') :
+        result13 = []
+        result13.append(r.hmget(key,'Name')[0].decode())
+        result13.append(r.hmget(key,'Variation')[0].decode())
+        result13.append(r.hmget(key,'Sell')[0].decode())
+        result13.append(r.hmget(key,'Seasonal_Availability')[0].decode())
+        result13.append(r.hmget(key,'Villager_Equippable')[0].decode())
+        result13.append(r.hmget(key,'Primary_Shape')[0].decode())
+        result13.append(r.hmget(key,'Secondary_Shape')[0].decode())
+        result13.append(r.hmget(key,'Color_1')[0].decode())
+        result13.append(r.hmget(key,'Color_2')[0].decode())
+        result13.append(r.hmget(key,'Label_Themes')[0].decode())
+        results13.append(result13)
+print("Query 13 :", results13)
+
+#Query 14
+results14 = []
+for key in fencing :
+    result14 = []
+    result14.append(r.hmget(key,'Name')[0].decode())
+    result14.append(r.hmget(key,'Sell')[0].decode())
+    result14.append(r.hmget(key,'Source_Notes')[0].decode())
+    results14.append(result14)
+print("Query 14 :", results14)
+
+#Query 15
+results15 = []
+for key in fish:
+    elem_decoded = r.hmget(key,'Where/How')[0].decode()
+    elem_decoded1 = r.hmget(key,'Lighting_Type')[0].decode()
+    if (elem_decoded == 'Sea') and (elem_decoded1 == 'Fluorescent') :
+        result15 = []
+        result15.append(r.hmget(key,'Name')[0].decode())
+        result15.append(r.hmget(key,'Sell')[0].decode())
+        result15.append(r.hmget(key,'Color_1')[0].decode())
+        result15.append(r.hmget(key,'Color_2')[0].decode())
+        result15.append(r.hmget(key,'Shadow')[0].decode())
+        result15.append(int(r.hmget(key,'Total_Catches_to_Unlock')[0].decode()))
+        result15.append(r.hmget(key,'Spawn_Rates')[0].decode())
+        result15.append(r.hmget(key,'Rain/Snow_Catch_Up')[0].decode())
+        results15.append(result15)
+print("Query 15 :", sorted(results15,key = lambda x: x[5]))
+
+#Query 16
+results16 = []
+for key in floors:
+    elem_decoded = r.hmget(key,'HHA_Concept_1')[0].decode()
+    elem_decoded1 = r.hmget(key,'HHA_Concept_2')[0].decode()
+    if (elem_decoded == 'expensive') and (elem_decoded1 == 'facility') :
+        result16 = []
+        result16.append(r.hmget(key,'Name')[0].decode())
+        result16.append(r.hmget(key,'Buy')[0].decode())
+        result16.append(r.hmget(key,'Sell')[0].decode())
+        result16.append(r.hmget(key,'Catalog')[0].decode())
+        result16.append(r.hmget(key,'VFX')[0].decode())
+        result16.append(r.hmget(key,'Color_1')[0].decode())
+        result16.append(r.hmget(key,'Color_2')[0].decode())
+        result16.append(r.hmget(key,'Tag')[0].decode())
+        result16.append(r.hmget(key,'Source')[0].decode())
+        results16.append(result16)
+print("Query 16 :", results16)
+
+#Query 17
+results17 = []
+for key in fossils:
+    elem_decoded = r.hmget(key,'Museum')[0].decode()
+    if (elem_decoded == 'Room 2'):
+        result17 = []
+        result17.append(r.hmget(key,'Name')[0].decode())
+        result17.append(r.hmget(key,'Sell')[0].decode())
+        result17.append(r.hmget(key,'Color_1')[0].decode())
+        result17.append(r.hmget(key,'Color_2')[0].decode())
+        result17.append(r.hmget(key,'Size')[0].decode())
+        results17.append(result17)
+print("Query 17 :", results17)
