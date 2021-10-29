@@ -1,0 +1,12 @@
+                  command                      |     time (in ms)    |    error (in ms)
+                                               | not cached | cached |
+-----------------------------------------------+------------+--------+---------------------
+INSERT INTO ... (...) VALUES (...);            |   ~21.5    | ~1.5   |        ~0.8
+DELETE FROM ... WHERE ...;                     |   ~21.5    | ~1.5   |        ~0.6
+UPDATE ... SET ... WHERE ...;                  |   ~22      | ~1.5   |        ~0.8
+ALTER TABLE ... ADD ... ...;                   |   ~22      | ~1.8   |        ~0.7
+ALTER TABLE ... DROP COLUMN ...;               |   ~22      | ~1.8   |        ~0.7
+ALTER TABLE ... ALTER COLUMN ...; (same type)  |   ~22      | ~1.5   |        ----
+ALTER TABLE ... ALTER COLUMN ...; (other type) |   ~48      | ~35    |        ----
+ALTER TABLE ... RENAME COLUMN ...;             |   ~30      | ~1.5   |        ~0.8
+
