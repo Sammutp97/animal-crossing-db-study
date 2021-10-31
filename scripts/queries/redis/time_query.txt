@@ -1,0 +1,39 @@
+Execution time for query_00 : 0.016543699999999717
+Execution time for query_01 : 0.015943000000007146
+Execution time for query_02: 0.015759400000007417
+Execution time for query_03 : 0.016089100000016288
+Execution time for query_04 : 0.030045499999999947
+Execution time for query_05 : 0.025587099999995644
+Execution time for query_06 : 0.01599900000002208
+Execution time for query_07 : 0.016349499999989803
+Execution time for query_08 : too long
+Execution time for query_09 : 0.01559769999994387
+Execution time for query_10 : 0.021966999999904147
+Execution time for query_11 : 0.0160500999999158
+Execution time for query_12 : 0.0265006000000767
+Execution time for query_13 : 0.015262000000006992
+Execution time for query_14 : 0.048689399999943817
+Execution time for query_15 : 0.015539600000010978
+Execution time for query_16 : 0.018181600000048093
+Execution time for query_17 : 0.020691200000101162
+Execution time for query_18 : 0.04078839999999673
+Execution time for query_19 : 0.01521679999996195
+Execution time for query_20 : 0.02997779999998329
+Execution time for query_21 : 0.01807379999991099
+Execution time for query_22 : 0.019896799999969517
+Execution time for query_23 : 0.02941740000005666
+Execution time for query_24 : 0.015502299999980096
+Execution time for query_25 : 0.01668029999996179
+Execution time for query_26 : 0.015269199999920602
+Execution time for query_27 : 0.015377100000023347
+Execution time for query_28 : 0.014632300000130272
+Execution time for query_29 : 0.016535800000156087
+Execution time for query_30 : 0.02466950000007273
+Execution time for query_31 : 0.025483399999984613
+Execution time for query_32 : 0.03298699999982091
+Execution time for query_33 : 0.015263000000004467
+Execution time for query_34 : 0.017864599999938946
+Execution time for query_35 : 0.02064180000002125
+Execution time for query_36 : too long
+Execution time for query_37 : 0.01439669999990656
+Execution time for query_38 : 0.02982719999999972
